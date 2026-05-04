@@ -20,10 +20,10 @@ function getWeather(){
       let condition = today.conditions;
 
       infoField.innerHTML = `
-        🌍 ${location}<br>
-        🌡️ Temp: ${temp}°F<br>
-        ☁️ Condition: ${condition}<br>
-        📅 High: ${today.tempmax}°F | Low: ${today.tempmin}°F
+         ${location}<br>
+         Temp: ${temp}°F<br>
+         Condition: ${condition}<br>
+        High: ${today.tempmax}°F | Low: ${today.tempmin}°F
       `;
 
       handleWeather(condition);
@@ -31,7 +31,7 @@ function getWeather(){
     })
     .catch(err => {
       console.error(err);
-      infoField.innerHTML = "couldn't find that location 😢";
+      infoField.innerHTML = "couldn't find that location, try that again";
     });
 }
 
