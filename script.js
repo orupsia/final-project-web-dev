@@ -65,7 +65,7 @@ function handleWeather(condition){
     audio.src = "";
   }
 
-  // ✅ BACKGROUND ONLY (no center image)
+ 
   document.body.style.backgroundImage = `url('${bgImage}')`;
   document.body.style.backgroundSize = "cover";
   document.body.style.backgroundPosition = "center";
