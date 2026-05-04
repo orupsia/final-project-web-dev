@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  font-family: "Helvetica";
+  color: white;
+  text-align: center;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  background: rgba(0,0,0,0.4);
+  padding: 20px;
+  border-radius: 20px;
+  margin: 50px auto;
+  width: 300px;
+}
+
+button {
+  background: powderblue;
+  border-radius: 20px;
+  border: none;
+  padding: 5px 10px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+input {
+  border-radius: 20px;
+  border: 1px dashed white;
+  padding: 5px;
+  background: transparent;
+  color: white;
+}
+
+img {
+  width: 120px;
+  margin-top: 10px;
+}
+
+/* decorations */
+.decorations {
+  position: relative;
+}
+
+.decor {
+  width: 40px;
+  margin: 5px;
+}
+
+/* animation 1 */
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* animation 2 */
+.spin {
+  animation: spin 6s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
