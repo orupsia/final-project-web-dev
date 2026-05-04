@@ -42,8 +42,6 @@ function handleWeather(condition){
   audio.pause();
   audio.currentTime = 0;
 
-  let bgImage = "";
-
   if (condition.includes("rain")) {
     bgImage = "images/rainyday.png";
     audio.src = "sounds/rainsounds.mp3";
