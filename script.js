@@ -58,10 +58,7 @@ function handleWeather(condition){
     bgImage = "images/sunnday.png";
     audio.src = "sounds/birdsounds.mp3";
   }
-  else {
-    bgImage = "images/default.png";
-    audio.src = "";
-  }
+ 
 
  
   document.body.style.backgroundImage = `url('${bgImage}')`;
