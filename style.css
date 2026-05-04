@@ -6,21 +6,29 @@ body {
 
   background-color: white;
   background-image: none;
+
+
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
+
+html, body {
+  height: 100%;
+}
 
 .title {
   margin-top: 30px;
   font-size: 28px;
 }
 
-
 .title-decor {
   width: 40px;
   vertical-align: middle;
   margin-left: 10px;
 }
-
 
 .controls {
   margin-top: 20px;
@@ -44,7 +52,6 @@ input {
   color: black;
 }
 
-
 .decor {
   position: absolute;
   width: 50px;
@@ -58,7 +65,6 @@ input {
 .d6 { bottom: 5%; right: 20%; }
 .d7 { top: 35%; right: 30%; }
 .d8 { bottom: 25%; left: 40%; }
-
 
 .float {
   animation: float 3s ease-in-out infinite;
