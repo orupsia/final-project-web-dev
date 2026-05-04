@@ -7,43 +7,32 @@
 
 <body>
 
-  <div class="container">
+  <!-- TITLE + ANIMATED IMAGES -->
+  <h2 class="title">
+    Sunny Angel!
+    <img src="images/smiski1.png" class="title-decor float">
+    <img src="images/sonnyangel1.png" class="title-decor spin">
+  </h2>
 
-    <h2>Sunny Angel!</h2>
-
-    <div class="controls">
-      <input type="text" id="location" placeholder="enter a place...">
-      <button onclick="getWeather()">check weather</button>
-      <button onclick="stopSound()">stop sound</button>
-    </div>
-
-    <p id="info">Search for a location to hear the weather 🎧</p>
-
-    <img id="resultImage"/>
-
-    <!-- Background upload -->
-    <div class="upload">
-      <label>Upload Background:</label>
-      <input type="file" id="bgUpload" accept="image/*">
-      <br>
-      <button onclick="resetBackground()">reset bg</button>
-    </div>
-
-    <!-- Decorations -->
-    <div class="decorations">
-      <img src="images/smiski1.png" class="decor float">
-      <img src="images/sonnyangel1.png" class="decor spin">
-      <img src="images/smiski2.png" class="decor">
-      <img src="images/sonnyangel2.png" class="decor">
-      <img src="images/smiski3.png" class="decor">
-      <img src="images/sonnyangel3.jpg" class="decor">
-      <img src="images/smiski4.png" class="decor">
-      <img src="images/smiski5.png" class="decor">
-      <img src="images/sonnyangel4.jpg" class="decor">
-      <img src="images/smiski6.jpg" class="decor">
-    </div>
-
+  <!-- CONTROLS -->
+  <div class="controls">
+    <input type="text" id="location" placeholder="enter a place...">
+    <button onclick="getWeather()">check weather</button>
+    <button onclick="stopSound()">stop sound</button>
   </div>
+
+  <!-- INFO -->
+  <p id="info">Search for a location to hear the weather 🎧</p>
+
+  <!-- FREE-FLOATING DECOR -->
+  <img src="images/smiski2.png" class="decor d1">
+  <img src="images/sonnyangel2.png" class="decor d2">
+  <img src="images/smiski3.png" class="decor d3">
+  <img src="images/sonnyangel3.jpg" class="decor d4">
+  <img src="images/smiski4.png" class="decor d5">
+  <img src="images/smiski5.png" class="decor d6">
+  <img src="images/sonnyangel4.jpg" class="decor d7">
+  <img src="images/smiski6.jpg" class="decor d8">
 
   <script src="script.js"></script>
 </body>

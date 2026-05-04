@@ -8,21 +8,28 @@ body {
   background-image: none;
 }
 
-/* container card */
-.container {
-  background: rgba(255, 255, 255, 0.85);
-  padding: 20px;
-  border-radius: 20px;
-  margin: 50px auto;
-  width: 300px;
+/* TITLE */
+.title {
+  margin-top: 30px;
+  font-size: 28px;
+}
 
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+/* animated images next to title */
+.title-decor {
+  width: 40px;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+/* controls */
+.controls {
+  margin-top: 20px;
 }
 
 button {
   background: powderblue;
   color: black;
-  border-radius: 20px;
+  border-radius: 0px;
   border: none;
   padding: 5px 10px;
   margin: 5px;
@@ -30,29 +37,30 @@ button {
 }
 
 input {
-  border-radius: 20px;
-  border: 1px dashed black;
+  border-radius: 0px;
+  border: 1px solid black;
   padding: 5px;
   background: transparent;
   color: black;
 }
 
-img {
-  width: 120px;
-  margin-top: 10px;
-}
-
-/* decorations */
-.decorations {
-  position: relative;
-}
-
+/* floating decor around screen */
 .decor {
-  width: 40px;
-  margin: 5px;
+  position: absolute;
+  width: 50px;
 }
 
-/* floating animation */
+/* scattered positions */
+.d1 { top: 10%; left: 5%; }
+.d2 { top: 20%; right: 10%; }
+.d3 { top: 50%; left: 2%; }
+.d4 { top: 70%; right: 5%; }
+.d5 { bottom: 10%; left: 15%; }
+.d6 { bottom: 5%; right: 20%; }
+.d7 { top: 35%; right: 30%; }
+.d8 { bottom: 25%; left: 40%; }
+
+/* animations */
 .float {
   animation: float 3s ease-in-out infinite;
 }
@@ -63,7 +71,6 @@ img {
   100% { transform: translateY(0px); }
 }
 
-/* spinning animation */
 .spin {
   animation: spin 6s linear infinite;
 }
