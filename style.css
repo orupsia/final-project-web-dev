@@ -1,24 +1,27 @@
 body {
   margin: 0;
   font-family: "Helvetica";
-  color: white;
+  color: black;
   text-align: center;
 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-color: white;
+  background-image: none;
 }
 
+/* container card */
 .container {
-  background: rgba(0,0,0,0.4);
+  background: rgba(255, 255, 255, 0.85);
   padding: 20px;
   border-radius: 20px;
   margin: 50px auto;
   width: 300px;
+
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 button {
   background: powderblue;
+  color: black;
   border-radius: 20px;
   border: none;
   padding: 5px 10px;
@@ -28,10 +31,10 @@ button {
 
 input {
   border-radius: 20px;
-  border: 1px dashed white;
+  border: 1px dashed black;
   padding: 5px;
   background: transparent;
-  color: white;
+  color: black;
 }
 
 img {
@@ -49,7 +52,7 @@ img {
   margin: 5px;
 }
 
-/* animation 1 */
+/* floating animation */
 .float {
   animation: float 3s ease-in-out infinite;
 }
@@ -60,7 +63,7 @@ img {
   100% { transform: translateY(0px); }
 }
 
-/* animation 2 */
+/* spinning animation */
 .spin {
   animation: spin 6s linear infinite;
 }

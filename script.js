@@ -2,7 +2,7 @@ let locationField;
 let infoField;
 let imgElement = document.getElementById("resultImage");
 
-let audio = new Audio(); // for ambient sounds
+let audio = new Audio();
 
 document.addEventListener('DOMContentLoaded', () => {
   locationField = document.querySelector("#location");
@@ -13,7 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const file = e.target.files[0];
     if (file) {
       const url = URL.createObjectURL(file);
+
       document.body.style.backgroundImage = `url(${url})`;
+      document.body.style.backgroundSize = "cover";
+      document.body.style.backgroundPosition = "center";
     }
   });
 });
@@ -29,18 +32,14 @@ function getWeather(){
       let temp = today.temp;
       let condition = today.conditions;
 
-      // text info
       infoField.innerHTML = `
         🌍 ${location}<br>
         🌡️ Temp: ${temp}°F<br>
-        ☁️ Condition: ${condition}
+        ☁️ Condition: ${condition}<br>
+        📅 High: ${today.tempmax}°F | Low: ${today.tempmin}°F
       `;
 
-      // simple forecast
-      infoField.innerHTML += `<br>📅 Today High: ${today.tempmax}°F | Low: ${today.tempmin}°F`;
-
-      // visuals + sounds
-      handleWeather(condition, temp);
+      handleWeather(condition);
 
     })
     .catch(err => {
@@ -49,11 +48,10 @@ function getWeather(){
     });
 }
 
-function handleWeather(condition, temp){
+function handleWeather(condition){
 
   condition = condition.toLowerCase();
 
-  // stop previous sound
   audio.pause();
   audio.currentTime = 0;
 
@@ -83,4 +81,9 @@ function handleWeather(condition, temp){
 
 function stopSound(){
   audio.pause();
+}
+
+function resetBackground(){
+  document.body.style.backgroundImage = "none";
+  document.body.style.backgroundColor = "white";
 }
